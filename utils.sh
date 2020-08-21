@@ -4,12 +4,12 @@ then
   find . -name "db.sqlite3" -exec rm -rf {} + && \
   find . -type d -name "__pycache__" -exec rm -rf {} + && \
   find . -path "*/migrations/*" -not -name "__init__.py" -exec rm -rf {} + && \
-  echo $1" done."
+  echo "$0 $1 done."
 
 elif [[ "$1" == "clean" ]] || [[ "$1" == "-c" ]]
 then
   find . -type d -name "__pycache__" -exec rm -rf {} + && \
-  echo $1" done."
+  echo "$0 $1 done."
 
 elif [[ "$1" == "cheatsheet" ]] || [[ "$1" == "-cs" ]]
 then
